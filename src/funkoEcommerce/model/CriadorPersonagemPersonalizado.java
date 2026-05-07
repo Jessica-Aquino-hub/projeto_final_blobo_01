@@ -4,8 +4,8 @@ public class CriadorPersonagemPersonalizado extends funkoEcommerce.model.Persona
 	String nomePersonagem;
 	String aparencia;
 	
-	public CriadorPersonagemPersonalizado(String nomeComprador, String nomePersonagem, String aparencia) {
-		super(nomeComprador);
+	public CriadorPersonagemPersonalizado(String nomeComprador,int numeroCompra, float preco, String nomePersonagem, String aparencia) {
+		super(nomeComprador, numeroCompra, preco);
 		this.nomePersonagem = nomePersonagem;
 		this.aparencia = aparencia;
 	}
