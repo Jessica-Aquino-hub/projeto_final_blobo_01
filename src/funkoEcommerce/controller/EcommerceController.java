@@ -19,21 +19,32 @@ public class EcommerceController implements EcommerceRepository{
 
 	@Override
 	public void criar(Personagem nomePersonagem) {
+		
 		listaPersonagem.add(nomePersonagem);
-		System.out.printf("O personagem %d foi criado com sucessor!%n", nomePersonagem.getNome());
+		System.out.printf("O personagem", nomePersonagem.getNome()," foi criado com sucessor!%n" );
 	}
 
 	
 	@Override
 	public void atualizar(Personagem nomePersonagem) {
-		
+	
+		if(listaPersonagem.contains(nomePersonagem) == true) {
+			listaPersonagem.set(listaPersonagem.indexOf(nomePersonagem), nomePersonagem);
+		} else {
+			System.out.println("\nO Personagem não existe!");
+		}
 	}
 
 	@Override
 	public void deletar(Personagem nomePersonagem) {
-		
-		
+		if(listaPersonagem.contains(nomePersonagem) == true) {
+			listaPersonagem.remove(nomePersonagem);
+			System.out.printf("\nO Personagem ", nomePersonagem, " foi excluido com sucesso!");
+		} else {
+			System.out.println("\nO Personagem não existe!");
+		}
 	}
+	
 
 	
 }

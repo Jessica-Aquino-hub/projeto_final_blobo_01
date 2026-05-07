@@ -7,10 +7,9 @@ public abstract class Personagem {
 	private float preco;
 
 	//Método construtor
-	public Personagem(String nomeComprador, int numeroCompra, float preco) {
+	public Personagem(String nomeComprador, int numeroCompra) {
 		this.nomeComprador = nomeComprador;
 		this.numeroCompra = numeroCompra;
-		this.preco = preco;
 	}
 	
 	//Métodos de acesso
@@ -26,12 +25,7 @@ public abstract class Personagem {
 	public void setNumeroCompra(int numeroCompra) {
 		this.numeroCompra = numeroCompra;
 	}
-	public float getPreco() {
-		return preco;
-	}
-	public void setPreco(float preco) {
-		this.preco = preco;
-	}
+	
 
 	public void visualizar() {
 
@@ -40,7 +34,7 @@ public abstract class Personagem {
 		System.out.println("***********************************************************");
 		System.out.println("Nome do Comprador: " + this.nomeComprador);
 		System.out.println("Número da Compra: " + this.numeroCompra);
-		System.out.println("Valor da compra: " + this.preco);
+		
 		
 	}
 }
